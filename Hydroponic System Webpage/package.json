@@ -1,0 +1,14 @@
+{
+  "name": "hydroponic-system-webpage",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.4"
+  }
+}
