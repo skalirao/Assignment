@@ -129,9 +129,28 @@ console.log(transactions.reduce((sum,user)=>{
 // We can change .length for the arrays but for the strings .length is read-only
 
 // 3. Sparse Arrays
+// A sparse array is an array in which some elements are intentionally left empty, 
+// meaning they don’t have actual values or even undefined — they are “missing” slots.
 
+// 4. delete Operator on Arrays
+// Removes the element at index 1 without changing the array length. 
+// It leaves a hole, making it a sparse array.
 
+// 5. Array.isArray()
+// The typeof operator returns "object" for arrays, objects, and null — making it ambiguous.
 
+// 6. Mutability of sort() and reverse()
+// These methods change the array in place:
+//	originalData.sort() changes originalData
+//	anotherArray.reverse() changes anotherArray
+// map() and filter() don't change the original array but instead return a reference to the array
+
+// 7. Shallow Copying Arrays
+// Spread syntax ([...]) creates a shallow copy
+// Only top-level elements are copied.
+// Nested arrays/objects are still referenced, not copied.
+// So when you modify copiedArr[1][0], you’re modifying the
+// same nested array referenced by originalArr.
 
 // Section 3: Confusing Array Output Questions
 
@@ -258,11 +277,11 @@ console.log(originalNumbers);
 // Iteration 2: num = 2 → push 4 → [1, 2, 3, 2, 4]
 // Iteration 3: num = 3 → push 6 → [1, 2, 3, 2, 4, 6]
 
-//Q4
+// Q4
 let chars1 = ["a", "b", "c"];
 let result1 = chars1.reduce((acc, char1) => acc + char1);
 console.log(result1); // What if the array was empty?
-
+*/
 // Section 6: Real-World Problem Solving
 // 1. Shopping List Manager
 let ShoppingList=["Laptop","Phone","Charger","Adaptor"]
@@ -336,7 +355,6 @@ function FailedStudents(names, grades) {
     return names.filter((name, index) => grades[index] < 80);
 }
 console.log("Failed Students: ",FailedStudents(StudentNames, StudentGrades))
-*/
 
 // 3. Inventory Management
 const Inventory=[
